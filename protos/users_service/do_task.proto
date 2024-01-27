@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+option go_package = "genproto/users_service";
+
+package users_service;
+
+import "teacher_service.proto";
+
+service TodoTaskService {
+    rpc Create(CreateDoTask) returns (DoTask) {}
+    rpc GetById(DoTaskPrimaryKey) returns (DoTask) {}
+    rpc GetList(GetListDoTaskRequest) returns (GetListDoTaskResponse) {}
+    rpc Update(UpdateDoTask) returns (DoTask) {}
+    rpc Delete(DoTaskPrimaryKey) returns (Empty) {}
+}
+
+message DoTaskPrimaryKey {
+    string id = 1;
+}
+
+message CreateDoTask {
+    string student_id = 1;
+    string task_id = 2;
+    string  lesson_id = 3;
+    double score = 4;
+
+}
+
+message DoTask {
+    string id = 1;
+    string student_id = 2;
+    string task_id = 3;
+    string lesson_id = 4;
+    string created_at = 5;
+    string updated_at = 6;
+    double score = 7;
+}
+
+message UpdateDoTask {
+    string id = 1;
+    string student_id = 2;
+    string task_id = 3;
+    string lesson_id = 4;
+    double score = 5;
+}
+
+message GetListDoTaskRequest {
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+
+}
+
+message GetListDoTaskResponse {
+    int64 Count = 1;
+    repeated DoTask DoTasks = 2;
+}

@@ -1,0 +1,94 @@
+syntax = "proto3";
+
+option go_package = "genproto/users_service";
+package users_service;
+service ReportService {
+    rpc GetStudent(ReportRequest) returns (StudentList) {}
+    rpc GetSupportTeacher(ReportRequest) returns (SupportTeacherList) {}
+    rpc GetAdministrator(ReportRequest) returns (AdminList) {}
+    rpc GetTeacher(ReportRequest) returns (TeacherList) {}
+    rpc GetStudentGroup(GroupId) returns (StudentList) {}
+    rpc GetStudentGroupByTeacher(GroupId) returns (StudentReportByTeacher){}
+}
+
+message ReportRequest{
+    string branch_id = 1;
+}
+
+message StudentReportByTeacher{
+    string teacher_name = 1;
+    repeated GetStudent student_list = 2;
+    int64 count = 3;
+}
+
+message GroupId{
+    string group_id = 1;
+}
+
+message StudentList {
+    repeated GetStudent student_list = 1;
+}
+
+message GetStudent  {
+    string full_name = 1;
+    string phone = 2;
+    string paid_sum = 3;
+    string cource_count = 4;
+    string total_sum = 5;
+}
+message TeacherList {
+    repeated GetTeacher teacher_list = 1;
+}
+
+message GetTeacher {
+    string full_name = 1;
+    string phone = 2;
+    string salary = 3;
+    string password = 4;
+    string login = 5;
+    string months_worked = 6;
+    string total_sum = 7;
+    string ielts_score = 8;
+}
+
+message SupportTeacherList {
+    repeated GetSupportTeacher support_teacher_list = 1;
+}
+
+message GetSupportTeacher {
+    string full_name = 1;
+    string phone = 2;
+    string salary = 3;
+    string password = 4;
+    string login = 5;
+    string months_worked = 6;
+    string total_sum = 7;
+    string ielts_score = 8;
+}
+
+message AdminList {
+    repeated GetAdministrator admin_list = 1;
+}
+
+message GetAdministrator {
+    string full_name = 1;
+    string phone = 2;
+    string password = 3;
+    string login = 4;
+    string salary = 5;
+    string ielts_score = 6;
+}
+
+message TeacherId {
+    string id = 1;
+}
+
+
+
+
+
+
+
+
+
+

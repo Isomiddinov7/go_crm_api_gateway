@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option go_package = "genproto/users_service";
+
+package users_service;
+import "teacher_service.proto";
+
+
+service LessonService{
+    rpc Create(CreateLesson) returns(Lesson){}
+    rpc GetById(LessonPrimaryKey) returns(Lesson){}
+    rpc GetList(GetListLessonRequest) returns(GetListLessonResponse){}
+    rpc Update(UpdateLesson) returns(Lesson){}
+    rpc Delete(LessonPrimaryKey) returns(Empty){}
+}
+
+message LessonPrimaryKey{
+    string id = 1;
+}
+
+message Lesson{
+    string id = 1;
+    string schedule_id = 2;
+    string lesson = 3;
+    string created_at = 4;
+    string updated_at = 5;
+}
+
+message CreateLesson{
+    string schedule_id = 1;
+    string lesson = 2;
+}
+
+message UpdateLesson{
+    string id = 1;
+    string schedule_id = 2;
+    string lesson = 3;
+}
+
+message GetListLessonRequest{
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+message GetListLessonResponse{
+    int64 count = 1;
+    repeated Lesson lessons = 2;
+}

@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option go_package = "genproto/users_service";
+package users_service;
+import "teacher_service.proto";
+
+service RoleService{
+    rpc Create(CreateRole) returns(Role){}
+    rpc GetById(RolePrimaryKey) returns(Role){}
+    rpc GetList(GetListRoleRequest) returns(GetListRoleResponse){}
+    rpc Update(UpdateRole) returns(Role){}
+    rpc Delete(RolePrimaryKey) returns(Empty){}
+}
+
+message RolePrimaryKey{
+    string id = 1;
+}
+
+
+message Role{
+    string id = 1;
+    string role = 2;
+}
+
+
+message CreateRole{
+    string role = 1;
+}
+
+message UpdateRole{
+    string id = 1;
+    string role = 2;
+}
+
+message GetListRoleRequest{
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+message GetListRoleResponse{
+    int64 count = 1;
+    repeated Role Roles = 2;
+}

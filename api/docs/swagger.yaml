@@ -1,0 +1,4690 @@
+definitions:
+  http.Response:
+    properties:
+      data: {}
+      description:
+        type: string
+      status:
+        type: string
+    type: object
+  users_service.AdminList:
+    properties:
+      admin_list:
+        items:
+          $ref: '#/definitions/users_service.GetAdministrator'
+        type: array
+    type: object
+  users_service.Administration:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.AssignStudent:
+    properties:
+      created_at:
+        type: string
+      event_id:
+        type: string
+      id:
+        type: string
+      student_id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.Branch:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.CreateAdministration:
+    properties:
+      branch_id:
+        type: string
+      full_name:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+    type: object
+  users_service.CreateAssignStudent:
+    properties:
+      event_id:
+        type: string
+      student_id:
+        type: string
+    type: object
+  users_service.CreateBranch:
+    properties:
+      name:
+        type: string
+    type: object
+  users_service.CreateEvent:
+    properties:
+      branch_id:
+        type: string
+      day:
+        type: string
+      start_time:
+        type: string
+      topic:
+        type: string
+    type: object
+  users_service.CreateGroup:
+    properties:
+      branch_id:
+        type: string
+      support_teacher_id:
+        type: string
+      teacher_id:
+        type: string
+      type:
+        type: string
+      uniqueID:
+        type: string
+    type: object
+  users_service.CreateJournal:
+    properties:
+      from:
+        type: string
+      group_id:
+        type: string
+      student_id:
+        type: string
+      to:
+        type: string
+    type: object
+  users_service.CreateLesson:
+    properties:
+      lesson:
+        type: string
+      schedule_id:
+        type: string
+    type: object
+  users_service.CreateManager:
+    properties:
+      branch_id:
+        type: string
+      full_name:
+        type: string
+      login:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      saley:
+        type: string
+    type: object
+  users_service.CreatePayment:
+    properties:
+      branch_id:
+        type: string
+      course_count:
+        type: string
+      paid_sum:
+        type: string
+      student_id:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.CreateSchedules:
+    properties:
+      branch_id:
+        type: string
+      end_time:
+        type: string
+      group_id:
+        type: string
+      group_type:
+        type: string
+      number_of_student:
+        type: string
+      start_time:
+        type: string
+      support_teacher_id:
+        type: string
+      teacher_id:
+        type: string
+    type: object
+  users_service.CreateScore:
+    properties:
+      student_id:
+        type: string
+      task_id:
+        type: string
+    type: object
+  users_service.CreateStudent:
+    properties:
+      branch_id:
+        type: string
+      cource_count:
+        type: string
+      full_name:
+        type: string
+      group_id:
+        type: string
+      paid_sum:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.CreateSupportTeacher:
+    properties:
+      branch_di:
+        type: string
+      full_name:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      months_worked:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.CreateTask:
+    properties:
+      deadline:
+        type: string
+      label:
+        type: string
+      lesson_id:
+        type: string
+      score:
+        type: integer
+    type: object
+  users_service.CreateTeacher:
+    properties:
+      branch_id:
+        type: string
+      full_name:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      months_worked:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.Event:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      day:
+        type: string
+      id:
+        type: string
+      start_time:
+        type: string
+      topic:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.GetAdministrator:
+    properties:
+      full_name:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      salary:
+        type: string
+    type: object
+  users_service.GetListAdministrationResponse:
+    properties:
+      administrations:
+        items:
+          $ref: '#/definitions/users_service.Administration'
+        type: array
+      count:
+        type: integer
+    type: object
+  users_service.GetListAssignStudentResponse:
+    properties:
+      assign_students:
+        items:
+          $ref: '#/definitions/users_service.AssignStudent'
+        type: array
+      count:
+        type: integer
+    type: object
+  users_service.GetListBranchResponse:
+    properties:
+      branchs:
+        items:
+          $ref: '#/definitions/users_service.Branch'
+        type: array
+      count:
+        type: integer
+    type: object
+  users_service.GetListEventResponse:
+    properties:
+      count:
+        type: integer
+      events:
+        items:
+          $ref: '#/definitions/users_service.Event'
+        type: array
+    type: object
+  users_service.GetListGroupResponse:
+    properties:
+      count:
+        type: integer
+      groups:
+        items:
+          $ref: '#/definitions/users_service.Group'
+        type: array
+    type: object
+  users_service.GetListJournalResponse:
+    properties:
+      count:
+        type: integer
+      journals:
+        items:
+          $ref: '#/definitions/users_service.Journal'
+        type: array
+    type: object
+  users_service.GetListLessonResponse:
+    properties:
+      count:
+        type: integer
+      lessons:
+        items:
+          $ref: '#/definitions/users_service.Lesson'
+        type: array
+    type: object
+  users_service.GetListManagerResponse:
+    properties:
+      count:
+        type: integer
+      managers:
+        items:
+          $ref: '#/definitions/users_service.Manager'
+        type: array
+    type: object
+  users_service.GetListPaymentResponse:
+    properties:
+      count:
+        type: integer
+      payments:
+        items:
+          $ref: '#/definitions/users_service.Payment'
+        type: array
+    type: object
+  users_service.GetListSchedulesResponse:
+    properties:
+      count:
+        type: integer
+      schedules:
+        items:
+          $ref: '#/definitions/users_service.Schedules'
+        type: array
+    type: object
+  users_service.GetListScoreResponse:
+    properties:
+      count:
+        type: integer
+      scores:
+        items:
+          $ref: '#/definitions/users_service.Score'
+        type: array
+    type: object
+  users_service.GetListStudentResponse:
+    properties:
+      count:
+        type: integer
+      students:
+        items:
+          $ref: '#/definitions/users_service.Student'
+        type: array
+    type: object
+  users_service.GetListSupportTeacherResponse:
+    properties:
+      count:
+        type: integer
+      support_teachers:
+        items:
+          $ref: '#/definitions/users_service.SupportTeacher'
+        type: array
+    type: object
+  users_service.GetListTaskResponse:
+    properties:
+      count:
+        type: integer
+      tasks:
+        items:
+          $ref: '#/definitions/users_service.Task'
+        type: array
+    type: object
+  users_service.GetListTeacherResponse:
+    properties:
+      count:
+        type: integer
+      teachers:
+        items:
+          $ref: '#/definitions/users_service.Teacher'
+        type: array
+    type: object
+  users_service.GetStudent:
+    properties:
+      cource_count:
+        type: string
+      full_name:
+        type: string
+      paid_sum:
+        type: string
+      phone:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.GetSupportTeacher:
+    properties:
+      full_name:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      months_worked:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      salary:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.GetTeacher:
+    properties:
+      full_name:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      months_worked:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      salary:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.Group:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      support_teacher_id:
+        type: string
+      teacher_id:
+        type: string
+      type:
+        type: string
+      uniqueID:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.Journal:
+    properties:
+      created_at:
+        type: string
+      from:
+        type: string
+      group_id:
+        type: string
+      id:
+        type: string
+      student_id:
+        type: string
+      to:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.Lesson:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: string
+      lesson:
+        type: string
+      schedule_id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.Manager:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: string
+      login:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      saley:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.Payment:
+    properties:
+      branch_id:
+        type: string
+      course_count:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      paid_sum:
+        type: string
+      student_id:
+        type: string
+      total_sum:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.Schedules:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      end_time:
+        type: string
+      group_id:
+        type: string
+      group_type:
+        type: string
+      id:
+        type: string
+      number_of_student:
+        type: string
+      start_time:
+        type: string
+      support_teacher_id:
+        type: string
+      teacher_id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.Score:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: string
+      student_id:
+        type: string
+      task_id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.Student:
+    properties:
+      branch_id:
+        type: string
+      cource_count:
+        type: integer
+      created_at:
+        type: string
+      full_name:
+        type: string
+      group_id:
+        type: string
+      id:
+        type: string
+      paid_sum:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      total_sum:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.StudentList:
+    properties:
+      student_list:
+        items:
+          $ref: '#/definitions/users_service.GetStudent'
+        type: array
+    type: object
+  users_service.StudentReportByTeacher:
+    properties:
+      count:
+        type: integer
+      student_list:
+        items:
+          $ref: '#/definitions/users_service.GetStudent'
+        type: array
+      teacher_name:
+        type: string
+    type: object
+  users_service.SupportTeacher:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      months_worked:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+      total_sum:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.SupportTeacherList:
+    properties:
+      support_teacher_list:
+        items:
+          $ref: '#/definitions/users_service.GetSupportTeacher'
+        type: array
+    type: object
+  users_service.Task:
+    properties:
+      created_at:
+        type: string
+      deadline:
+        type: string
+      id:
+        type: string
+      label:
+        type: string
+      lesson_id:
+        type: string
+      score:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  users_service.Teacher:
+    properties:
+      branch_id:
+        type: string
+      created_at:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      months_worked:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+      total_sum:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  users_service.TeacherList:
+    properties:
+      teacher_list:
+        items:
+          $ref: '#/definitions/users_service.GetTeacher'
+        type: array
+    type: object
+  users_service.UpdateAdministration:
+    properties:
+      branch_id:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+    type: object
+  users_service.UpdateAssignStudent:
+    properties:
+      event_id:
+        type: string
+      id:
+        type: string
+      student_id:
+        type: string
+    type: object
+  users_service.UpdateBranch:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+  users_service.UpdateEvent:
+    properties:
+      branch_id:
+        type: string
+      day:
+        type: string
+      id:
+        type: string
+      start_time:
+        type: string
+      topic:
+        type: string
+    type: object
+  users_service.UpdateGroup:
+    properties:
+      branch_id:
+        type: string
+      id:
+        type: string
+      support_teacher_id:
+        type: string
+      teacher_id:
+        type: string
+      type:
+        type: string
+      uniqueID:
+        type: string
+    type: object
+  users_service.UpdateJournal:
+    properties:
+      from:
+        type: string
+      group_id:
+        type: string
+      id:
+        type: string
+      student_id:
+        type: string
+      to:
+        type: string
+    type: object
+  users_service.UpdateLesson:
+    properties:
+      id:
+        type: string
+      lesson:
+        type: string
+      schedule_id:
+        type: string
+    type: object
+  users_service.UpdateManager:
+    properties:
+      branch_id:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: string
+      login:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      saley:
+        type: string
+    type: object
+  users_service.UpdatePayment:
+    properties:
+      branch_id:
+        type: string
+      course_count:
+        type: string
+      id:
+        type: string
+      paid_sum:
+        type: string
+      student_id:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.UpdateSchedules:
+    properties:
+      branch_id:
+        type: string
+      end_time:
+        type: string
+      group_id:
+        type: string
+      group_type:
+        type: string
+      id:
+        type: string
+      number_of_student:
+        type: string
+      start_time:
+        type: string
+      support_teacher_id:
+        type: string
+      teacher_id:
+        type: string
+    type: object
+  users_service.UpdateScore:
+    properties:
+      id:
+        type: string
+      student_id:
+        type: string
+      task_id:
+        type: string
+    type: object
+  users_service.UpdateStudent:
+    properties:
+      branch_id:
+        type: string
+      cource_count:
+        type: integer
+      full_name:
+        type: string
+      group_id:
+        type: string
+      id:
+        type: string
+      paid_sum:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.UpdateSupportTeacher:
+    properties:
+      branch_id:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      months_worked:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+      total_sum:
+        type: string
+    type: object
+  users_service.UpdateTask:
+    properties:
+      deadline:
+        type: string
+      id:
+        type: string
+      label:
+        type: string
+      lesson_id:
+        type: string
+      score:
+        type: integer
+    type: object
+  users_service.UpdateTeacher:
+    properties:
+      branch_id:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: string
+      ielts_score:
+        type: string
+      login:
+        type: string
+      months_worked:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      role_id:
+        type: string
+      salary:
+        type: string
+      total_sum:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /administration:
+    get:
+      consumes:
+      - application/json
+      description: Get Administration s List
+      operationId: get_administration_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: full_name
+        in: query
+        name: first_name
+        type: string
+      - description: phone
+        in: query
+        name: phone
+        type: string
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllAdministrationResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListAdministrationResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Administration s List
+      tags:
+      - Administration
+    post:
+      consumes:
+      - application/json
+      description: Create Administration
+      operationId: create_administration
+      parameters:
+      - description: CreateAdministrationBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateAdministration'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAdministrationBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Administration'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Administration
+      tags:
+      - Administration
+  /administration/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Administration
+      operationId: delete_administration
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Administration data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Administration
+      tags:
+      - Administration
+    get:
+      consumes:
+      - application/json
+      description: Get Administration  By ID
+      operationId: get_administration_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: AdministrationBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Administration'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Administration  By ID
+      tags:
+      - Administration
+    put:
+      consumes:
+      - application/json
+      description: Update Administration
+      operationId: update_administration
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateAdministration
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateAdministration'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Administration data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Administration'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Administration
+      tags:
+      - Administration
+  /assign_student:
+    get:
+      consumes:
+      - application/json
+      description: Get AssignStudent s List
+      operationId: get_assign_student_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllAssignStudentResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListAssignStudentResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get AssignStudent s List
+      tags:
+      - AssignStudent
+    post:
+      consumes:
+      - application/json
+      description: Create AssignStudent
+      operationId: create_assign_student
+      parameters:
+      - description: CreateAssignStudentBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateAssignStudent'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAssignStudentBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.AssignStudent'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create AssignStudent
+      tags:
+      - AssignStudent
+  /assign_student/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete AssignStudent
+      operationId: delete_assign_student
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: AssignStudent data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete AssignStudent
+      tags:
+      - AssignStudent
+    get:
+      consumes:
+      - application/json
+      description: Get AssignStudent  By ID
+      operationId: get_assign_student_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: AssignStudentBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.AssignStudent'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get AssignStudent  By ID
+      tags:
+      - AssignStudent
+    put:
+      consumes:
+      - application/json
+      description: Update AssignStudent
+      operationId: update_assign_student
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateAssignStudent
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateAssignStudent'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: AssignStudent data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.AssignStudent'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update AssignStudent
+      tags:
+      - AssignStudent
+  /branch:
+    get:
+      consumes:
+      - application/json
+      description: Get Branch s List
+      operationId: get_branch_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: phone
+        in: query
+        name: phone
+        type: string
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllBranchResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListBranchResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Branch s List
+      tags:
+      - Branch
+    post:
+      consumes:
+      - application/json
+      description: Create Branch
+      operationId: create_branch
+      parameters:
+      - description: CreateBranchBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateBranch'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetBranchBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Branch'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Branch
+      tags:
+      - Branch
+  /branch/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Branch
+      operationId: delete_branch
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Branch data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Branch
+      tags:
+      - Branch
+    get:
+      consumes:
+      - application/json
+      description: Get Branch  By ID
+      operationId: get_branch_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: BranchBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Branch'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Branch  By ID
+      tags:
+      - Branch
+    put:
+      consumes:
+      - application/json
+      description: Update Branch
+      operationId: update_branch
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateBranch
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateBranch'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Branch data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Branch'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Branch
+      tags:
+      - Branch
+  /event:
+    get:
+      consumes:
+      - application/json
+      description: Get Event s List
+      operationId: get_event_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllEventResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListEventResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Event s List
+      tags:
+      - Event
+    post:
+      consumes:
+      - application/json
+      description: Create Event
+      operationId: create_event
+      parameters:
+      - description: CreateEventBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateEvent'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetEventBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Event'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Event
+      tags:
+      - Event
+  /event/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Event
+      operationId: delete_event
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Event data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Event
+      tags:
+      - Event
+    get:
+      consumes:
+      - application/json
+      description: Get Event  By ID
+      operationId: get_event_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: EventBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Event'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Event  By ID
+      tags:
+      - Event
+    put:
+      consumes:
+      - application/json
+      description: Update Event
+      operationId: update_event
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateEvent
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateEvent'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Event data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Event'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Event
+      tags:
+      - Event
+  /group:
+    get:
+      consumes:
+      - application/json
+      description: Get Group s List
+      operationId: get_group_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: full_name
+        in: query
+        name: first_name
+        type: string
+      - description: phone
+        in: query
+        name: phone
+        type: string
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllGroupResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListGroupResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Group s List
+      tags:
+      - Group
+    post:
+      consumes:
+      - application/json
+      description: Create Group
+      operationId: create_group
+      parameters:
+      - description: CreateGroupBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateGroup'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetGroupBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Group'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Group
+      tags:
+      - Group
+  /group/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Group
+      operationId: delete_group
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Group data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Group
+      tags:
+      - Group
+    get:
+      consumes:
+      - application/json
+      description: Get Group  By ID
+      operationId: get_group_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GroupBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Group'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Group  By ID
+      tags:
+      - Group
+    put:
+      consumes:
+      - application/json
+      description: Update Group
+      operationId: update_group
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateGroup
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateGroup'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Group data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Group'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Group
+      tags:
+      - Group
+  /journal:
+    get:
+      consumes:
+      - application/json
+      description: Get Journal s List
+      operationId: get_journal_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllJournalResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListJournalResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Journal s List
+      tags:
+      - Journal
+    post:
+      consumes:
+      - application/json
+      description: Create Journal
+      operationId: create_journal
+      parameters:
+      - description: CreateJournalBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateJournal'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetJournalBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Journal'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Journal
+      tags:
+      - Journal
+  /journal/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Journal
+      operationId: delete_journal
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Journal data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Journal
+      tags:
+      - Journal
+    get:
+      consumes:
+      - application/json
+      description: Get Journal  By ID
+      operationId: get_journal_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: JournalBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Journal'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Journal  By ID
+      tags:
+      - Journal
+    put:
+      consumes:
+      - application/json
+      description: Update Journal
+      operationId: update_journal
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateJournal
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateJournal'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Journal data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Journal'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Journal
+      tags:
+      - Journal
+  /lesson:
+    get:
+      consumes:
+      - application/json
+      description: Get Lesson s List
+      operationId: get_lesson_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllLessonResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListLessonResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Lesson s List
+      tags:
+      - Lesson
+    post:
+      consumes:
+      - application/json
+      description: Create Lesson
+      operationId: create_lesson
+      parameters:
+      - description: CreateLessonBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateLesson'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetLessonBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Lesson'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Lesson
+      tags:
+      - Lesson
+  /lesson/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Lesson
+      operationId: delete_lesson
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Lesson data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Lesson
+      tags:
+      - Lesson
+    get:
+      consumes:
+      - application/json
+      description: Get Lesson  By ID
+      operationId: get_lesson_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: LessonBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Lesson'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Lesson  By ID
+      tags:
+      - Lesson
+    put:
+      consumes:
+      - application/json
+      description: Update Lesson
+      operationId: update_lesson
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateLesson
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateLesson'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Lesson data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Lesson'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Lesson
+      tags:
+      - Lesson
+  /manager:
+    get:
+      consumes:
+      - application/json
+      description: Get Manager s List
+      operationId: get_manager_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: full_name
+        in: query
+        name: first_name
+        type: string
+      - description: phone
+        in: query
+        name: phone
+        type: string
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllManagerResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListManagerResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Manager s List
+      tags:
+      - Manager
+    post:
+      consumes:
+      - application/json
+      description: Create Manager
+      operationId: create_manager
+      parameters:
+      - description: CreateManagerBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateManager'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetManagerBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Manager'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Manager
+      tags:
+      - Manager
+  /manager/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Manager
+      operationId: delete_manager
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Manager data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Manager
+      tags:
+      - Manager
+    get:
+      consumes:
+      - application/json
+      description: Get Manager  By ID
+      operationId: get_manager_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ManagerBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Manager'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Manager  By ID
+      tags:
+      - Manager
+    put:
+      consumes:
+      - application/json
+      description: Update Manager
+      operationId: update_manager
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateManager
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateManager'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Manager data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Manager'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Manager
+      tags:
+      - Manager
+  /payment:
+    get:
+      consumes:
+      - application/json
+      description: Get Payment s List
+      operationId: get_payment_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllPaymentResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListPaymentResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Payment s List
+      tags:
+      - Payment
+    post:
+      consumes:
+      - application/json
+      description: Create Payment
+      operationId: create_payment
+      parameters:
+      - description: CreatePaymentBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreatePayment'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetPaymentBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Payment'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Payment
+      tags:
+      - Payment
+  /payment/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Payment
+      operationId: delete_payment
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Payment data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Payment
+      tags:
+      - Payment
+    get:
+      consumes:
+      - application/json
+      description: Get Payment  By ID
+      operationId: get_payment_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: PaymentBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Payment'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Payment  By ID
+      tags:
+      - Payment
+    put:
+      consumes:
+      - application/json
+      description: Update Payment
+      operationId: update_payment
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdatePayment
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdatePayment'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Payment data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Payment'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Payment
+      tags:
+      - Payment
+  /report/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Get Report  By ID
+      operationId: get_report_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ReportBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.StudentReportByTeacher'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Report  By ID
+      tags:
+      - Report
+  /schedules:
+    get:
+      consumes:
+      - application/json
+      description: Get Schedules s List
+      operationId: get_schedules_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllSchedulesResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListSchedulesResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Schedules s List
+      tags:
+      - Schedules
+    post:
+      consumes:
+      - application/json
+      description: Create Schedules
+      operationId: create_schedules
+      parameters:
+      - description: CreateSchedulesBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateSchedules'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetSchedulesBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Schedules'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Schedules
+      tags:
+      - Schedules
+  /schedules/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Schedules
+      operationId: delete_schedules
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Schedules data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Schedules
+      tags:
+      - Schedules
+    get:
+      consumes:
+      - application/json
+      description: Get Schedules  By ID
+      operationId: get_schedules_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SchedulesBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Schedules'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Schedules  By ID
+      tags:
+      - Schedules
+    put:
+      consumes:
+      - application/json
+      description: Update Schedules
+      operationId: update_schedules
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateSchedules
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateSchedules'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Schedules data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Schedules'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Schedules
+      tags:
+      - Schedules
+  /score:
+    get:
+      consumes:
+      - application/json
+      description: Get Score s List
+      operationId: get_score_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllScoreResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListScoreResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Score s List
+      tags:
+      - Score
+    post:
+      consumes:
+      - application/json
+      description: Create Score
+      operationId: create_score
+      parameters:
+      - description: CreateScoreBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateScore'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetScoreBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Score'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Score
+      tags:
+      - Score
+  /score/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Score
+      operationId: delete_score
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Score data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Score
+      tags:
+      - Score
+    get:
+      consumes:
+      - application/json
+      description: Get Score  By ID
+      operationId: get_score_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ScoreBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Score'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Score  By ID
+      tags:
+      - Score
+    put:
+      consumes:
+      - application/json
+      description: Update Score
+      operationId: update_score
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateScore
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateScore'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Score data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Score'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Score
+      tags:
+      - Score
+  /student:
+    get:
+      consumes:
+      - application/json
+      description: Get Student s List
+      operationId: get_student_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: full_name
+        in: query
+        name: first_name
+        type: string
+      - description: phone
+        in: query
+        name: phone
+        type: string
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllStudentResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListStudentResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Student s List
+      tags:
+      - Student
+    post:
+      consumes:
+      - application/json
+      description: Create Student
+      operationId: create_student
+      parameters:
+      - description: CreateStudentBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateStudent'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetStudentBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Student'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Student
+      tags:
+      - Student
+  /student/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Student
+      operationId: delete_student
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Student data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Student
+      tags:
+      - Student
+    get:
+      consumes:
+      - application/json
+      description: Get Student  By ID
+      operationId: get_student_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: StudentBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Student'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Student  By ID
+      tags:
+      - Student
+    put:
+      consumes:
+      - application/json
+      description: Update Student
+      operationId: update_student
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateStudent
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateStudent'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Student data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Student'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Student
+      tags:
+      - Student
+  /support_teacher:
+    get:
+      consumes:
+      - application/json
+      description: Get SupportTeacher s List
+      operationId: get_support_teacher_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: full_name
+        in: query
+        name: first_name
+        type: string
+      - description: phone
+        in: query
+        name: phone
+        type: string
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllSupportTeacherResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListSupportTeacherResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get SupportTeacher s List
+      tags:
+      - SupportTeacher
+    post:
+      consumes:
+      - application/json
+      description: Create SupportTeacher
+      operationId: create_support_teacher
+      parameters:
+      - description: CreateSupportTeacherBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateSupportTeacher'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetSupportTeacherBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.SupportTeacher'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create SupportTeacher
+      tags:
+      - SupportTeacher
+  /support_teacher/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete SupportTeacher
+      operationId: delete_support_teacher
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SupportTeacher data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete SupportTeacher
+      tags:
+      - SupportTeacher
+    get:
+      consumes:
+      - application/json
+      description: Get SupportTeacher  By ID
+      operationId: get_support_teacher_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SupportTeacherBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.SupportTeacher'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get SupportTeacher  By ID
+      tags:
+      - SupportTeacher
+    put:
+      consumes:
+      - application/json
+      description: Update SupportTeacher
+      operationId: update_support_teacher
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateSupportTeacher
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateSupportTeacher'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: SupportTeacher data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.SupportTeacher'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update SupportTeacher
+      tags:
+      - SupportTeacher
+  /task:
+    get:
+      consumes:
+      - application/json
+      description: Get Task s List
+      operationId: get_task_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllTaskResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListTaskResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Task s List
+      tags:
+      - Task
+    post:
+      consumes:
+      - application/json
+      description: Create Task
+      operationId: create_task
+      parameters:
+      - description: CreateTaskBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateTask'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetTaskBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Task'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Task
+      tags:
+      - Task
+  /task/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Task
+      operationId: delete_task
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Task data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Task
+      tags:
+      - Task
+    get:
+      consumes:
+      - application/json
+      description: Get Task  By ID
+      operationId: get_task_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: TaskBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Task'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Task  By ID
+      tags:
+      - Task
+    put:
+      consumes:
+      - application/json
+      description: Update Task
+      operationId: update_task
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateTask
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateTask'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Task data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Task'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Task
+      tags:
+      - Task
+  /teacher:
+    get:
+      consumes:
+      - application/json
+      description: Get Teacher s List
+      operationId: get_teacher_list
+      parameters:
+      - description: offset
+        in: query
+        name: offset
+        type: integer
+      - description: limit
+        in: query
+        name: limit
+        type: integer
+      - description: full_name
+        in: query
+        name: first_name
+        type: string
+      - description: phone
+        in: query
+        name: phone
+        type: string
+      - default: a1924766-a9ee-11ed-afa1-0242ac120001
+        description: Platform-Id
+        in: header
+        name: Platform-Id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetAllTeacherResponseBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.GetListTeacherResponse'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Get Teacher s List
+      tags:
+      - Teacher
+    post:
+      consumes:
+      - application/json
+      description: Create Teacher
+      operationId: create_teacher
+      parameters:
+      - description: CreateTeacherBody
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.CreateTeacher'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: GetTeacherBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Teacher'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Create Teacher
+      tags:
+      - Teacher
+  /teacher/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Teacher
+      operationId: delete_teacher
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Teacher data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: object
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Delete Teacher
+      tags:
+      - Teacher
+    get:
+      consumes:
+      - application/json
+      description: Get Teacher  By ID
+      operationId: get_teacher_by_id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: TeacherBody
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Teacher'
+              type: object
+        "400":
+          description: Invalid Argument
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Get Teacher  By ID
+      tags:
+      - Teacher
+    put:
+      consumes:
+      - application/json
+      description: Update Teacher
+      operationId: update_teacher
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: UpdateTeacher
+        in: body
+        name: profile
+        required: true
+        schema:
+          $ref: '#/definitions/users_service.UpdateTeacher'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Teacher data
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/users_service.Teacher'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: Server Error
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Response'
+            - properties:
+                data:
+                  type: string
+              type: object
+      summary: Update Teacher
+      tags:
+      - Teacher
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

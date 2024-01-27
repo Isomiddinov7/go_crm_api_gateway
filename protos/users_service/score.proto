@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option go_package = "genproto/users_service";
+
+package users_service;
+import "teacher_service.proto";
+
+service ScoreService{
+    rpc Create(CreateScore) returns (Score){}
+    rpc GetById(ScorePrimaryKey) returns (Score){}
+    rpc GetList(GetListScoreRequest) returns (GetListScoreResponse){}
+    rpc Update(UpdateScore) returns (Score){}
+    rpc Delete(ScorePrimaryKey) returns (Empty){}
+    
+}
+
+message ScorePrimaryKey{
+    string id = 1;
+}
+
+message Score{
+    string id = 1;
+    string task_id = 2;
+    string student_id = 3;
+    string created_at = 4;
+    string updated_at = 5;
+}
+
+message CreateScore {
+    string task_id = 1;
+    string student_id = 2;
+}
+message UpdateScore {
+    string id = 1;
+    string task_id = 2;
+    string student_id = 3;
+}
+
+message GetListScoreRequest{
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+message GetListScoreResponse{
+    int64 count = 1;
+    repeated Score scores = 2;
+}

@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option go_package = "genproto/users_service";
+package users_service;
+import "teacher_service.proto";
+
+service GroupService{
+    rpc Create(CreateGroup) returns (Group){}
+    rpc GetById(GroupPrimaryKey) returns (Group){}
+    rpc GetList(GetListGroupRequest) returns (GetListGroupResponse){}
+    rpc Update(UpdateGroup) returns (Group){}
+    rpc Delete(GroupPrimaryKey) returns (Empty){}
+}
+
+message GroupPrimaryKey{
+    string id = 1;
+}
+
+message Group{
+    string id = 1;
+    string uniqueID = 2;
+    string branch_id = 3;
+    string type = 4;
+    string teacher_id = 5;
+    string support_teacher_id = 6;
+    string created_at = 7;
+    string updated_at = 8;
+}
+
+message CreateGroup{
+    string uniqueID = 1;
+    string branch_id = 2;
+    string type = 3;
+    string teacher_id = 4;
+    string support_teacher_id = 5;
+}
+
+
+message UpdateGroup{
+    string id = 1;
+    string uniqueID = 2;
+    string branch_id = 3;
+    string type = 4;
+    string teacher_id = 5;
+    string support_teacher_id = 6;
+}
+
+message GetListGroupRequest{
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+
+message GetListGroupResponse{
+    int64 count = 1;
+    repeated Group groups = 2;
+}

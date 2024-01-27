@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option go_package = "genproto/users_service";
+package users_service;
+import "teacher_service.proto";
+
+service ScheduleService{
+    rpc Create(CreateSchedule) returns(Schedule){}
+    rpc GetById(SchedulePrimaryKey) returns(Schedule){}
+    rpc GetList(GetListScheduleRequest) returns(GetListScheduleResponse){}
+    rpc Update(UpdateSchedule) returns(Schedule){}
+    rpc Delete(SchedulePrimaryKey) returns(Empty){}
+}
+
+message SchedulePrimaryKey{
+    string id = 1;
+}
+
+
+message Schedule{
+    string id = 1;
+    string start_time = 2;
+    string end_time = 3;
+    string journal_id = 4;
+    string created_at = 5;
+    string updated_at = 6;
+}
+
+
+message CreateSchedule{
+    string start_time = 1;
+    string end_time = 2;
+    string journal_id = 3;
+}
+
+message UpdateSchedule{
+    string id = 1;
+    string start_time = 2;
+    string end_time = 3;
+    string journal_id = 4;
+}
+
+message GetListScheduleRequest{
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+message GetListScheduleResponse{
+    int64 count = 1;
+    repeated Schedule schedules = 2;
+}

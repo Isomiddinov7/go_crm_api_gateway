@@ -1,0 +1,3 @@
+[submodule "crm_protos"]
+	path = crm_protos
+	url = git@github.com:Isomiddinov7/crm_protos.git

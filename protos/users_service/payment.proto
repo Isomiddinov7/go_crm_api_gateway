@@ -1,0 +1,59 @@
+syntax = "proto3";
+option go_package = "genproto/users_service";
+package users_service;
+import "teacher_service.proto";
+
+service PaymentService{
+    rpc Create(CreatePayment) returns (Payment){}
+    rpc GetById(PaymentPrimaryKey) returns (Payment){}
+    rpc GetList(GetListPaymentRequest) returns (GetListPaymentResponse){}
+    rpc Update(UpdatePayment) returns (Payment){}
+    rpc Delete(PaymentPrimaryKey) returns (Empty){}
+
+}
+
+message PaymentPrimaryKey{
+    string id = 1;
+}
+
+message Payment{
+    string id = 1;
+    string student_id = 2;
+    string branch_id = 3;
+    string paid_sum = 4;
+    string total_sum = 5;
+    string course_count = 6;
+    string created_at = 7;
+    string updated_at = 8;
+}
+
+message CreatePayment{
+    string student_id = 1;
+    string branch_id = 2;
+    string paid_sum = 3;
+    string total_sum = 4;
+    string course_count = 5;
+}
+
+
+message UpdatePayment{
+    string id = 1;
+    string student_id = 2;
+    string branch_id = 3;
+    string paid_sum = 4;
+    string total_sum = 5;
+    string course_count = 6;
+}
+
+
+message GetListPaymentRequest{
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+
+message GetListPaymentResponse{
+    int64 count = 1;
+    repeated Payment payments = 2;
+}

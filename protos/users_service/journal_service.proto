@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+option go_package = "genproto/users_service";
+package users_service;
+import "teacher_service.proto";
+
+service JournalService{
+    rpc Create(CreateJournal) returns(Journal){}
+    rpc GetById(JournalPrimaryKey) returns(Journal){}
+    rpc GetList(GetListJournalRequest) returns(GetListJournalResponse){}
+    rpc Update(UpdateJournal) returns(Journal){}
+    rpc Delete(JournalPrimaryKey) returns(Empty){}
+}
+
+message JournalPrimaryKey{
+    string id = 1;
+}
+
+
+message Journal{
+    string id = 1;
+    string group_id = 2;
+    string from = 3;
+    string to = 4;
+    string student_id = 5;
+    string created_at = 6;
+    string updated_at = 7;
+}
+
+
+message CreateJournal{
+    string group_id = 1;
+    string from = 2;
+    string to = 3;
+    string student_id = 4;
+}
+
+message UpdateJournal{
+    string id = 1;
+    string group_id = 2;
+    string from = 3;
+    string to = 4;
+    string student_id = 5;
+}
+
+message GetListJournalRequest{
+    int64 offset = 1;
+    int64 limit = 2;
+    string search = 3;
+}
+
+message GetListJournalResponse{
+    int64 count = 1;
+    repeated Journal journals = 2;
+}
